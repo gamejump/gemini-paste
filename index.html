@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gemini PasteHub</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    // Apply theme from localStorage before React loads to prevent FOUC
+    (function() {
+      try {
+        const theme = localStorage.getItem('pastehub-theme');
+        if (theme === 'dark' || (!theme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+          document.documentElement.classList.add('dark');
+        } else {
+          document.documentElement.classList.remove('dark');
+        }
+      } catch (_) {}
+    })();
+  </script>
+  <style>
+    /* Custom scrollbar for webkit browsers for better aesthetics */
+    /* Light mode scrollbar */
+    ::-webkit-scrollbar {
+      width: 8px;
+      height: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #e2e8f0; /* slate-200 */
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #94a3b8; /* slate-400 */
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #64748b; /* slate-500 */
+    }
+
+    /* Dark mode scrollbar */
+    .dark ::-webkit-scrollbar-track {
+      background: #1e293b; /* slate-800 */
+    }
+    .dark ::-webkit-scrollbar-thumb {
+      background: #475569; /* slate-600 */
+    }
+    .dark ::-webkit-scrollbar-thumb:hover {
+      background: #64748b; /* slate-500 */
+    }
+
+    body {
+      font-family: 'Inter', sans-serif; /* A nice sans-serif font */
+    }
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;700&display=swap');
+    .font-code {
+        font-family: 'JetBrains Mono', monospace;
+    }
+  </style>
+<script type="importmap">
+{
+  "imports": {
+    "react/": "https://esm.sh/react@^19.1.0/",
+    "react": "https://esm.sh/react@^19.1.0",
+    "react-router-dom": "https://esm.sh/react-router-dom@^7.6.2",
+    "react-dom/": "https://esm.sh/react-dom@^19.1.0/"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+<body class="bg-white dark:bg-slate-900 text-slate-900 dark:text-slate-100 transition-colors duration-300 ease-in-out">
+  <div id="root"></div>
+  <script type="module" src="/bundle.js"></script>
+<script type="module" src="/index.tsx"></script>
+</body>
+</html>

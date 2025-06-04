@@ -1,0 +1,6 @@
+{
+  "name": "Gemini PasteHub",
+  "description": "A modern paste-saving site, allowing users to create, share, and manage text snippets with ease. Create and view your pastes with syntax highlighting.",
+  "requestFramePermissions": [],
+  "prompt": ""
+}

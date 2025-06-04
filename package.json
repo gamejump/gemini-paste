@@ -1,0 +1,30 @@
+{
+  "name": "gemini-pastehub",
+  "version": "1.0.0",
+  "description": "A modern paste-saving site using Gemini API.",
+  "main": "index.tsx",
+  "scripts": {
+    "build": "mkdir -p dist && esbuild index.tsx --bundle --outfile=dist/bundle.js --loader:.tsx=tsx --platform=browser --format=esm --define:process.env.NODE_ENV='\"production\"' && cp index.html dist/index.html",
+    "start": "esbuild index.tsx --bundle --outfile=dist/bundle.js --loader:.tsx=tsx --platform=browser --format=esm --servedir=. --watch"
+  },
+  "keywords": [
+    "react",
+    "typescript",
+    "tailwindcss",
+    "pastebin",
+    "gemini"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "react-router-dom": "^7.6.1"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.0",
+    "@types/react-dom": "^18.3.0",
+    "esbuild": "^0.20.0",
+    "typescript": "^5.3.0"
+  }
+}
