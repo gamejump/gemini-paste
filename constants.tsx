@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { SyntaxOption } from './types';
+import { SyntaxOption } from './types.ts';
 
 export const APP_TITLE = "Gemini PasteHub";
 

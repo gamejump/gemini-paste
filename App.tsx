@@ -1,10 +1,10 @@
 
 import React from 'react';
 import { Routes, Route, Navigate } from 'react-router-dom';
-import HomePage from './pages/HomePage';
-import ViewPastePage from './pages/ViewPastePage';
-import NotFoundPage from './pages/NotFoundPage';
-import Layout from './components/Layout';
+import HomePage from './pages/HomePage.tsx';
+import ViewPastePage from './pages/ViewPastePage.tsx';
+import NotFoundPage from './pages/NotFoundPage.tsx';
+import Layout from './components/Layout.tsx';
 
 const App: React.FC = () => {
   return (

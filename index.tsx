@@ -1,10 +1,10 @@
 
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import App from './App';
+import App from './App.tsx';
 import { HashRouter } from 'react-router-dom';
-import { PastesProvider } from './contexts/PastesContext';
-import { ThemeProvider } from './contexts/ThemeContext';
+import { PastesProvider } from './contexts/PastesContext.tsx';
+import { ThemeProvider } from './contexts/ThemeContext.tsx';
 
 const rootElement = document.getElementById('root');
 if (!rootElement) {
